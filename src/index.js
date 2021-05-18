@@ -10,14 +10,16 @@ import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
       criarPullRequest();
       localStorage.removeItem('abrirModal');
     }
-    var botaoClose = document.getElementsByClassName("btn-link")[3]
+  
         
-    botaoClose.addEventListener("click", function (e) {
+   
      
      
     //VALIDA ENTRADA EM GITHUB MILESTONES
     if (urlParts[5] == "milestones" && urlParts[2] == "github.com") {         
     //BOTOES    
+    var botaoClose = document.getElementsByClassName("btn-link")[3]
+    botaoClose.addEventListener("click", function (e) {
     // var closeMilestoneButton = document.querySelector(".d-inline-block.mr-2 .btn-link");
     //VALIDA FECHAMENTO DE MILESTONE
     // if (e.path[0] == closeMilestoneButton &&
@@ -47,9 +49,9 @@ import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
         
           var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
           location.reload();
-    //  }
+     });
     }
-  });
+  ;
 
  
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device"  && urlParts[5] != "success" &&  urlParts[5] != "confirmation"){
