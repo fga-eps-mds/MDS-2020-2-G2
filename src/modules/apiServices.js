@@ -165,6 +165,9 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
        ProcuraContribuicao(recebeContribuintes,  numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone, token,  $owner, $repo, nomeSprint);
   
       }
+      else{
+        CreateDivDisplay(7, 7, 7);
+      }
     });
     xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/milestones?state=all&sort=completeness");
     xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
@@ -207,6 +210,9 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
          calculaCommits(contribuinte, todosCommits.length, numerosContribuintes, nomeSprint);
       
       }
+      else{
+        CreateDivDisplay(7, 7, 7);
+      }
     });
     
     xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/commits?author="+contribuinte+"&since="+dataAberturaMilestone+"&until="+dataFechamentoMilestone);
@@ -227,6 +233,9 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
      GraficoPessoal(nomeContribuinte, qtdComitsContribuinte, nomeSprint);
      CreateDivDisplay(6, 1, 1)
    }
+   else{
+    CreateDivDisplay(7, 7, 7);
+  }
     
    contador++;
  
@@ -286,6 +295,9 @@ export function geracaoPorGrupoAdicoes( token, $owner, $repo){
       var qtdSemanas = respostaJson[0].weeks.length
       
       getDadosSemanaisContribuinteAdicoes(qtdContribuintes, qtdSemanas, respostaJson);
+    }
+    else{
+      CreateDivDisplay(7, 7, 7);
     }
   });
   
@@ -347,6 +359,9 @@ export function geracaoPorGrupoDelecoes( token, $owner, $repo){
 
       getDadosSemanaisContribuinteDelecoes(qtdContribuintes, qtdSemanas, respostaJson);
     }
+    else{
+      CreateDivDisplay(7, 7, 7);
+    }
   });
   
   xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/stats/contributors");
@@ -406,7 +421,11 @@ export function geracaoPorGrupoCommits( token, $owner, $repo){
  
        getDadosSemanaisContribuinteCommits(qtdContribuintes, qtdSemanas, respostaJson);
     }
-  });
+    else{
+      CreateDivDisplay(7, 7, 7);
+    }
+  }
+  );
   
   xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/stats/contributors");
   xhr.setRequestHeader("authorization", "Bearer " + token);
