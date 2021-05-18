@@ -11,6 +11,8 @@ import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
       localStorage.removeItem('abrirModal');
     }
     document.addEventListener("click", function (e) {
+     
+      
     //VALIDA ENTRADA EM GITHUB MILESTONES
     if (urlParts[5] == "milestones" && urlParts[2] == "github.com") {         
      
@@ -42,7 +44,7 @@ import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
           //INSTRUÇÃO PARA AUTORIZAR A ABERTURA DO MODAL
           localStorage.setItem('abrirModal', 'true')
           // var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
-          location.reload(true);
+          location.reload();
      }
     }
   });
