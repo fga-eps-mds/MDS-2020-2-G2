@@ -3,9 +3,15 @@
 <img src="imagens/logo.png" width="auto" height="auto">
 
 ## 🔭 Sobre 
-Consiste em um bot de produtividade ativado no GitHub a cada fechamento de milestone, dando um apanhado geral da atual sprint e realizando automaticamente um pull request com as métricas da mesma. 
-
-Quando se está trabalhando em times de desenvolvimento de software é muito importante gerenciar o andamento do projeto de perto e ter um feedback consistente de tudo que está ocorrendo na sprint. O PullBot se encaixa aí! Sua utilidade principal é o gerenciamento efetivo do projeto, e por consequência, ganho de tempo e maior controle de todo trabalho e produtividade da equipe. Ele irá criar um pull request com as métricas da milestone finalizada e dar um relatório de desempenho da equipe e de cada integrante. 
+Bot de produtividade ativado no GitHub. O PullBot tem por objetivo acelerar a produtividade de um repositório.
+Suas principais Features são:
+- Pull Request automático de uma branch ao fechar a Milestone.
+- Quando uma Milestone chegar ao seu fim e for fechada no botão close, aparecerá uma interface (modal) para escolher qual Branch deseja realizar um Pull Request.
+- Relatório Markdown.
+- Ao finalizar o Pull Request, o bot fará um dowload de um arquivo .txt escrito em Markdown que mostrará informações sobre os integrantes daquele repositório. Informações como:  Quantidade de Commits , Quantidade de Issues associadas e a Quantidade de comentários em Issues naquela Milestone por contribuinte e o ranking de contribuições total do repositório.
+- Gráficos informativos
+- O PullBot conta com 3 gráficos, gráficos de Commits em cada Milestone por contribuinte, gráfico de linhas de código adicionadas e deletadas por contribuintes durante as semanas e um gráfico de todos Commits de todas as Branchs por todos contribuintes durantes as semanas.
+- Para encontrar esses gráficos, basta entrar em algum repositório e entrar em alguma Milestone, fechada ou aberta, e em seguida abrir o pop-up do PullBot. Todos os gráficos estarão disponíveis nesse pop-up.
 
 ## 🌱 Funcionalidades
 - Pull request automático via GitHub API.
