@@ -46,7 +46,7 @@ Clientes | Usuários da plataforma GitHub | Acompanhar a execução do projeto, 
 ## 3.2. Resumo dos Usuários
 Nome | Descrição
 :-:|:-:
-Usuários de GitHub | Pessoas que possuem uma conta na plataforma GitHub.
+Usuários do GitHub | Pessoas que possuem uma conta na plataforma GitHub e desejam acompanhar as métricas de desenvolvimento dos contribuintes de um projeto.
 
 ## 3.3. Ambiente do Usuário
 O usuário necessita de um computador que possua o navegador Google Chrome para que seja possível instalar a extensão PullBot e acessar o GitHub.
@@ -79,8 +79,8 @@ O usuário necessita de um computador que possua o navegador Google Chrome para 
 **Descrição** | Responsáveis pela demanda do projeto
 **Tipo** | Usuários do GitHub
 **Critério de Sucesso** | Acompanhar a execução do projeto, evidenciando a devida apreciação sobre cada funcionalidade do produto
-**Envolvimento** | Médio
-**Problemas/Comentários** | Usuários de GitHub que por algum motivo não consigam instalar a extensão corretamente
+**Envolvimento** | Alto
+**Problemas/Comentários** | Usuários que por algum motivo não consigam instalar a extensão corretamente
 
 ## 3.5. Perfil do Usuário
 ### 3.5.1. Usuários de GitHub
@@ -90,20 +90,20 @@ O usuário necessita de um computador que possua o navegador Google Chrome para 
 **Descrição** | Responsáveis pela demanda do projeto
 **Tipo** | Usuários do GitHub
 **Critério de Sucesso** | Acompanhar a execução do projeto, evidenciando a devida apreciação sobre cada funcionalidade do produto
-**Envolvimento** | Médio
-**Problemas/Comentários** | Usuários de GitHub que por algum motivo não consigam instalar a extensão corretamente
+**Envolvimento** | Alto
+**Problemas/Comentários** | Usuários que por algum motivo não consigam instalar a extensão corretamente
 
 # 4. Visão Geral do Produto
 ## 4.1. Perspectiva do produto
-O produto tem a finalidade de auxiliar os usuários do GitHub a visualizarem de forma clara e simples as métricas de desenvolvimento dos contribuintes de um repositório por meio de gráficos informativos. Os gráficos apresentam informações de todo o período e também de uma milestone específica, tanto de forma coletiva quanto individual, como quantidade de commits, contribuições, etc. Além disso, também possui as funcionalidades de criar um Pull Request com as informações selecionadas pelo usuário e realizar automaticamente o download de um relatório em markdown após o fechamento de uma milestone, também com as métricas da equipe.
+O produto tem a finalidade de auxiliar os usuários do GitHub a visualizarem de forma clara e simples as métricas de desenvolvimento dos contribuintes de um repositório por meio um relatório e de gráficos informativos construidos utilizando a API do GitHub. Os gráficos apresentam informações de todo o período e também de uma milestone específica, tanto de forma coletiva quanto individual, como quantidade de commits, contribuições, etc. Além disso, também possui as funcionalidades de criar um Pull Request com as informações selecionadas pelo usuário e realizar automaticamente o download de um relatório em markdown após o fechamento de uma milestone, também com as métricas da equipe.
 
 # 5. Recursos do Produto
-O PullBot possui as seguintes funcionalidade:
+O PullBot possui as seguintes funcionalidades:
 
 ## 5.1. Geração de Gráficos
 Após instalar a extensão, o usuário poderá abrir o popup e escolher entre os seguintes gráficos para visualizar:
 
-* Milestone: exibe a quantidade de commits de cada contribuinte durante a última milestone aberta; o usuário também tem a opção de entrar em uma milestone já fechada para visualizar suas métricas.
+* Milestone: exibe a quantidade de commits de cada contribuinte durante a última milestone aberta; o usuário também tem a opção de abrir uma milestone já fechada para visualizar suas métricas.
 * Adições: exibe a quantidade de linhas de código adicionadas por cada contribuinte durante o projeto.
 * Deleções: exibe a quantidade de linhas de código deletadas por cada contribuinte durante o projeto.
 * Commits: exibe a quantidade de commits de cada contribuinte durante o projeto.
