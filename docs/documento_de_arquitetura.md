@@ -57,9 +57,7 @@ A finalidade do projeto PullBot se concentra em auxiliar os usuário da platafor
 * Content Script.
 
 ## 2.1. Camada de negócio (Back-end)
-Também chamada de lógica empresarial, regras de negócio ou funcionalidade. É nela que ficam as funções e regras de todo o negócio. Não existe uma interface para o usuário e seus dados são voláteis. Nessa camada são utilizadas as tecnologias Node em conjunto com Express.
-
-### 2.1.1. Bibliotecas
+Também chamada de lógica empresarial, regras de negócio ou funcionalidade. É nela que ficam as funções e regras de todo o negócio. Não existe uma interface para o usuário e seus dados são voláteis.
 
 ## 2.2. Tecnologias
 Tecnologia | Descrição
