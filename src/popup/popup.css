@@ -87,3 +87,10 @@ body{
     transform: rotate(1turn);
   }
 }
+
+.texto_excecao{
+  align-content: center;
+  text-align: center;
+  color: #f4f4f4;
+  
+}

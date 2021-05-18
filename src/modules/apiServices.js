@@ -136,6 +136,9 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
     milestone(numeroMilestone, recebeContribuintes, $numerosContribuintes, token, $owner, $repo, sprint);
      
     
+  }
+  else{
+    CreateDivDisplay(7, 7, 7);
   }});
   
   xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/contributors");

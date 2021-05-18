@@ -31,7 +31,7 @@ $div1.addEventListener('click', ()=> {
   document.getElementById('b4').style.background = "#29567b";
   document.getElementById('b1').style.backgroundColor = "#021231";
   if(displayLoad){
-    CreateDivDisplay(6, 6, 6);
+    CreateDivDisplay(7, 6, 6);
     displayLoad = false;
     const owner = localStorage.getItem("owner")
     let repo = localStorage.getItem("repo")
@@ -41,7 +41,7 @@ $div1.addEventListener('click', ()=> {
     contribuinteRepositorio(numeroMilestone, token , owner,  repo )
     
   }else{ 
-    CreateDivDisplay(6, 1, 1);
+    CreateDivDisplay(7, 1, 1);
   }
  
  
@@ -56,7 +56,7 @@ $div2.addEventListener('click', ()=> {
   document.getElementById('b4').style.background = "#29567b";
   
   if(displayLoad2){
-    CreateDivDisplay(6, 6, 6);
+    CreateDivDisplay(7, 6, 6);
     displayLoad2 = false;
     const owner = localStorage.getItem("owner")
     let repo = localStorage.getItem("repo")
@@ -66,7 +66,7 @@ $div2.addEventListener('click', ()=> {
     geracaoPorGrupoAdicoes( token , owner,  repo )
   }
   else{ 
-    CreateDivDisplay(6, 2, 2); 
+    CreateDivDisplay(7, 2, 2); 
   }
  
  
@@ -79,7 +79,7 @@ $div3.addEventListener('click', ()=> {
   document.getElementById('b3').style.background = "#021231";
   document.getElementById('b4').style.background = "#29567b";
   if(displayLoad3){
-    CreateDivDisplay(6, 6, 6);
+    CreateDivDisplay(7, 6, 6);
     displayLoad3 = false;
     const owner = localStorage.getItem("owner")
     let repo = localStorage.getItem("repo")
@@ -88,7 +88,7 @@ $div3.addEventListener('click', ()=> {
     geracaoPorGrupoDelecoes( token , owner,  repo )
   }
   else{ 
-    CreateDivDisplay(6, 3, 3);
+    CreateDivDisplay(7, 3, 3);
   }
  
   
@@ -102,7 +102,7 @@ $div4.addEventListener('click', ()=> {
   document.getElementById('b3').style.background = "#29567b";
   document.getElementById('b4').style.background = "#021231";
   if(displayLoad4){
-    CreateDivDisplay(6, 6, 6);
+    CreateDivDisplay(7, 6, 6);
     displayLoad4 = false;
     const owner = localStorage.getItem("owner")
     let repo = localStorage.getItem("repo")
@@ -118,5 +118,4 @@ $div4.addEventListener('click', ()=> {
  
 });
 
-CreateDivDisplay(7, 7, 7)
 
