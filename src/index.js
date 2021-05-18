@@ -42,7 +42,7 @@ import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
           //INSTRUÇÃO PARA AUTORIZAR A ABERTURA DO MODAL
           localStorage.setItem('abrirModal', 'true')
           // var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
-          
+          location.reload(true);
      }
     }
   });
