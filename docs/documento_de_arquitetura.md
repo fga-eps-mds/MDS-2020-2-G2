@@ -66,6 +66,7 @@ Tecnologia | Descrição
 :-: | :-:
 JavaScript | É uma linguagem de programação de alto nível, principalmente utilizada para o desenvolvimento web,de fácil execução e que pode ser rodadar a partir de um navegador de internet. Ela é uma linguagem amplamente utilizaeda.
 Git | Git é um sistema de versionamento distribuído, usado para registrar o histórico de edições.Ela é geralmente usada no desenvolvimento de software.
+Chart.js | Biblioteca JavaScript para geração de gráficos.
 
 ## 2.3. API do GitHub
 API é um conjunto de instruções e informações sobre o acesso de uma aplicação. Ela é útil para estabalecer comunicação com funcionalidades e infomações que permite ao programador a implementação de novas funções não disponíveis comumente.
