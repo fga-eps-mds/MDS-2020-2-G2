@@ -118,4 +118,5 @@ $div4.addEventListener('click', ()=> {
  
 });
 
+CreateDivDisplay(7, 7, 7)
 
