@@ -12,7 +12,7 @@ import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
     }
     document.addEventListener("click", function (e) {
      
-      
+      urlParts[3], urlParts[4]
     //VALIDA ENTRADA EM GITHUB MILESTONES
     if (urlParts[5] == "milestones" && urlParts[2] == "github.com") {         
      
@@ -21,16 +21,17 @@ import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
     //VALIDA FECHAMENTO DE MILESTONE
     if (e.path[0] == closeMilestoneButton &&
         closeMilestoneButton.textContent.toLowerCase() == "close") {
-         
+          localStorage.setItem('abrirModal', 'true')
           var getFormAction = document.querySelectorAll('form[class="d-inline-block mr-2"]')[0].action;
+          window.alert(getFormAction);
           localStorage.setItem('getFormAction', getFormAction);
           //      SALVANDO INFORMAÇÕES NO LOCAL STORAGE
           var valuesAPI = String(getFormAction).split("/");
           // OWNER
-          const $owner = getOwner(valuesAPI);
+          const $owner = urlParts[3];
           localStorage.setItem('owner', $owner);
           // REPOSITORIO
-          const $repo = getRepositori(valuesAPI);
+          const $repo = urlParts[4]
           localStorage.setItem('repo', $repo);
           // NUMERO DA MILESTONE
           const $NumberMilestone = getNumberMilestone(valuesAPI);
@@ -42,7 +43,7 @@ import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
           localStorage.setItem('milestoneName', milestoneName); 
           var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
           //INSTRUÇÃO PARA AUTORIZAR A ABERTURA DO MODAL
-          localStorage.setItem('abrirModal', 'true')
+        
           // var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
           location.reload();
      }
