@@ -1,16 +1,30 @@
 {
+    "name": "pullbot",
+    "version": "1.0.0",
+    "description": "Bot do GitHub",
+    "main": "index.js",
+    "directories": {
+      "doc": "docs"
+    },
     "scripts": {
-        "test": "jest --coverage",
-        "test:watch": "npm run test -- --watch"
+      "test": "jest --coverage",
+      "test:watch": "npm run test -- --watch"
     },
-    "devDependencies": {
-        "@babel/core": "^7.6.0",
-        "@babel/present-env": "^7.6.0",
-        "babel-jest": "^24.9.0",
-        "jest": "^24.9.0",
-        "standard": "^14.3.1"
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/fga-eps-mds/PullBot.git"
     },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/fga-eps-mds/PullBot/issues"
+    },
+    "homepage": "https://github.com/fga-eps-mds/PullBot#readme",
     "dependencies": {
-        "@babel/preset-env": "^7.14.0"
+      "@babel/core": "^7.6.0",
+      "@babel/preset-env": "^7.14.0",
+      "babel-jest": "^24.9.0",
+      "jest": "^24.9.0",
+      "standard": "^14.3.1"
     }
-}
+  }
