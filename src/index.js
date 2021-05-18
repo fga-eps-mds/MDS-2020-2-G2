@@ -10,17 +10,18 @@ import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
       criarPullRequest();
       localStorage.removeItem('abrirModal');
     }
-    document.addEventListener("click", function (e) {
+    var botaoClose = document.getElementsByClassName("btn-link")[3]
+        
+    botaoClose.addEventListener("click", function (e) {
      
-      urlParts[3], urlParts[4]
+     
     //VALIDA ENTRADA EM GITHUB MILESTONES
     if (urlParts[5] == "milestones" && urlParts[2] == "github.com") {         
-     
     //BOTOES    
-    var closeMilestoneButton = document.querySelector(".d-inline-block.mr-2 .btn-link");
+    // var closeMilestoneButton = document.querySelector(".d-inline-block.mr-2 .btn-link");
     //VALIDA FECHAMENTO DE MILESTONE
-    if (e.path[0] == closeMilestoneButton &&
-        closeMilestoneButton.textContent.toLowerCase() == "close") {
+    // if (e.path[0] == closeMilestoneButton &&
+        // closeMilestoneButton.textContent.toLowerCase() == "close") {
           localStorage.setItem('abrirModal', 'true')
           var getFormAction = document.querySelectorAll('form[class="d-inline-block mr-2"]')[0].action;
           window.alert(getFormAction);
@@ -44,9 +45,9 @@ import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
           var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
           //INSTRUÇÃO PARA AUTORIZAR A ABERTURA DO MODAL
         
-          // var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
+          var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
           location.reload();
-     }
+    //  }
     }
   });
 
