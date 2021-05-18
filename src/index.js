@@ -11,13 +11,16 @@ import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
       localStorage.removeItem('abrirModal');
     }
     document.addEventListener("click", function (e) {
-     
-      urlParts[3], urlParts[4]
     //VALIDA ENTRADA EM GITHUB MILESTONES
-    if (urlParts[5] == "milestones" && urlParts[2] == "github.com") {         
-     
+    if (urlParts[5] == "milestones" && urlParts[2] == "github.com") {       
+
+    window.alert(urlParts);
+
     //BOTOES    
     var closeMilestoneButton = document.querySelector(".d-inline-block.mr-2 .btn-link");
+    window.alert(closeMilestoneButton);
+    window.alert(e.path[0]);
+    
     //VALIDA FECHAMENTO DE MILESTONE
     if (e.path[0] == closeMilestoneButton &&
         closeMilestoneButton.textContent.toLowerCase() == "close") {
