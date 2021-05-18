@@ -69,6 +69,7 @@ CSS3 | Tecnologia de estilização de determinadas aplicações.
 JavaScript | É uma linguagem de programação de alto nível, principalmente utilizada para o desenvolvimento web,de fácil execução e que pode ser rodadar a partir de um navegador de internet. Ela é uma linguagem amplamente utilizaeda.
 Git | Git é um sistema de versionamento distribuído, usado para registrar o histórico de edições.Ela é geralmente usada no desenvolvimento de software.
 Chart.js | Biblioteca JavaScript para geração de gráficos.
+FileServer.js | Biblioteca JavaScript utilizada para salvar arquivos do lado do cliente.
 
 
 ## 2.3. API do GitHub
