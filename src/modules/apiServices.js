@@ -133,12 +133,12 @@ export function ConfirmaLoginContaUsuario(){
 //VALORES A SEREM PASSADOS PARA API
 
 export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, sprint){
-
+console.log(numeroMilestone)
   var xhr = new XMLHttpRequest();
   
   
   xhr.addEventListener("readystatechange", function() {
-    if(xhr.readyState === 4) {
+    if(xhr.readyState === 4 && xhr.status == 200) { 
      var recebeContribuintes = JSON.parse(xhr.responseText);
     const $numerosContribuintes = recebeContribuintes.length;
     milestone(numeroMilestone, recebeContribuintes, $numerosContribuintes, token, $owner, $repo, sprint);
@@ -157,15 +157,16 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
   
   function milestone(numeroMilestone, recebeContribuintes, numerosContribuintes, token, $owner, $repo, sprint){ 
     var xhr = new XMLHttpRequest();
-  
+  console.log(numeroMilestone, recebeContribuintes, numerosContribuintes, token, $owner, $repo,)
     xhr.addEventListener("readystatechange", function() {
       if(xhr.readyState === 4) {
+        console.log(xhr.readyState);
         var b = String(xhr.responseText).split('url:')
         
        var resposta = JSON.parse(xhr.responseText);
       
        const resultadoProcura = milestoneDesejada(numeroMilestone,resposta, resposta.length)
-       
+       console.log(resultadoProcura)
        var nomeSprint = resultadoProcura.title
         var dataAberturaMilestone =  resultadoProcura.created_at
         var dataFechamentoMilestone = resultadoProcura.closed_at
