@@ -34,7 +34,7 @@ import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
         // closeMilestoneButton.textContent.toLowerCase() == "close") {
           localStorage.setItem('abrirModal', 'true')
           var getFormAction = document.querySelectorAll('form[class="d-inline-block mr-2"]')[0].action;
-          window.alert(getFormAction);
+        
           localStorage.setItem('getFormAction', getFormAction);
           //      SALVANDO INFORMAÇÕES NO LOCAL STORAGE
           var valuesAPI = String(getFormAction).split("/");
@@ -83,21 +83,21 @@ import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
 /*GET DONO DO REPOSITORIO*/
 function getOwner(valuesAPI){
   var owner = valuesAPI[3];
-  console.log(owner)
+  
   return owner;
 }
 
 /*GET  REPOSITORIO*/
 function getRepositori(valuesAPI){
   var repo = valuesAPI[4]
-  console.log(repo)
+ 
   return repo;
 }
 
 /*GET NUMERO DA MILESTONE A SER FECHADA*/
 function getNumberMilestone(valuesAPI){
   var milestoneNumber = valuesAPI[6]
-  console.log(milestoneNumber)
+  
   return milestoneNumber;
 }
 
