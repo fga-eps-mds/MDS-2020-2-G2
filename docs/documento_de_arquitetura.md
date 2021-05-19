@@ -98,7 +98,7 @@ O script de conteúdo será executado nos contextos de uma página que foi carre
 
 # 4. Visão de Caso de Uso
 ## 4.1. Ator (Usuário)
-O usuário será o único ator do sistema, responsável por instalar a extensão em seu navegador e realizar o fechamento de uma milestone no GitHub, afim de que o PullBot exerça suas funcionalidades.
+O usuário será o único ator do sistema, responsável por instalar a extensão em seu navegador, navegar até o GitHub na parte de milestones, conferir os gráficos no popup e/ou realizar o fechamento de uma milestone no GitHub, afim de que o PullBot exerça suas funcionalidades.
 
 ## 4.2. Diagrama de Caso de Uso
 <img src="https://raw.githubusercontent.com/fga-eps-mds/PullBot/master/imagens/casoDeUso.jpeg" width="750">
