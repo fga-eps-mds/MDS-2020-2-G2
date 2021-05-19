@@ -120,7 +120,7 @@ function criarModal(optionsBranches1, optionsBranches2){
     var xhr = new XMLHttpRequest();
     xhr.addEventListener("readystatechange", function () {
       if (xhr.readyState === 4) {
-        window.alert("funfou");
+        // window.alert("funfou");
       }
     });
       
