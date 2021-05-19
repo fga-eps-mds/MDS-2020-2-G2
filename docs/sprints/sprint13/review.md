@@ -22,13 +22,13 @@ Criar arquivo para a pipeline ci | Criar arquivo com o projeto tenha uma impleme
 Refatoração dos arquivos package.json para rodar os testes unitários | As dependências para rodar os scripts de testes unitários estavam quebradas, sendo necessário assim uma refatoração do arquivo "package.json' | Jaime Juan | Concluída
 
 ## Pontos positivos:
-* 
+* Finalização do projeto como um todo, com uma boa comunicação e uma efetiva partipação de todos. 
 
 ## Pontos negativos:
-* 
+* Sobrecarga de issues na sprint.
 
 ## Melhorias:
-* 
+* Aprimorar cada vez mais o projeto.
 
 ## Retorno do Scrum Master:
-* 
+* A equipe se empenhou bastante para conseguir finalizar o projeto como um todo e teve uma grande comunicação, além de um grande empenho geral. Conseguimos elencar e finalizar todo o escopo do projeto a tempo hábil da _Release 2_.
