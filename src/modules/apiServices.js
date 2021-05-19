@@ -139,7 +139,7 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
   
   
   xhr.addEventListener("readystatechange", function() {
-    if(xhr.readyState === 4 && xhr.status == 200) { 
+    if(xhr.readyState === 4) {
      var recebeContribuintes = JSON.parse(xhr.responseText);
     const $numerosContribuintes = recebeContribuintes.length;
     milestone(numeroMilestone, recebeContribuintes, $numerosContribuintes, token, $owner, $repo, sprint);
