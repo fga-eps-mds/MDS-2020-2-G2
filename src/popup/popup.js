@@ -15,6 +15,7 @@ chrome.storage.sync.get(['key'], function(result) {
   localStorage.setItem("repo", repo);
   localStorage.setItem("numeroMilestone", numeroMilestone)
   localStorage.setItem("token", token);
+
 });
 /*CREATE A DIV DISPLAY*/
 
@@ -43,9 +44,6 @@ $div1.addEventListener('click', ()=> {
   }else{ 
     CreateDivDisplay(6, 1, 1);
   }
- 
- 
- 
 });
 
 var displayLoad2 = true;

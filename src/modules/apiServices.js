@@ -72,7 +72,7 @@ export function CodigoDevicePost(){
        
        const $separatevalue = String($getResponse[3]).split("=");
        var codeUser = $separatevalue[1];
-       console.log(codeUser)
+       
         loginDevice(codeUser)
 
         var temCodigo = localStorage.getItem("key_dev");
@@ -87,6 +87,7 @@ export function CodigoDevicePost(){
     xhr.open("POST", "https://github.com/login/device/code?client_id=46da77694ca94b6a86d7&scope=repo%20user");
     xhr.send();
   }
+
   function loginDevice(codeUser){
    
     document.getElementById("user-code-0").value = codeUser[0];
@@ -111,7 +112,7 @@ export function ConfirmaLoginContaUsuario(){
       const $getResponse = String(xhr.responseText).split("&");
       const $separateToken = $getResponse[0].split("=");
       const $token = $separateToken[1]
-      console.log(xhr.responseText);
+     
       localStorage.setItem("token",$token);
     }
   });
@@ -138,13 +139,14 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
   
   
   xhr.addEventListener("readystatechange", function() {
-    if(xhr.readyState === 4) {
+    if(xhr.readyState === 4 && xhr.status == 200) { 
      var recebeContribuintes = JSON.parse(xhr.responseText);
     const $numerosContribuintes = recebeContribuintes.length;
     milestone(numeroMilestone, recebeContribuintes, $numerosContribuintes, token, $owner, $repo, sprint);
      
     
-  }});
+  }
+  });
   
   xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/contributors");
   xhr.setRequestHeader("authorization", "Bearer " + token);
@@ -157,6 +159,7 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
   
     xhr.addEventListener("readystatechange", function() {
       if(xhr.readyState === 4) {
+        
         var b = String(xhr.responseText).split('url:')
         
        var resposta = JSON.parse(xhr.responseText);
@@ -170,6 +173,7 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
        ProcuraContribuicao(recebeContribuintes,  numerosContribuintes, dataAberturaMilestone, dataFechamentoMilestone, token,  $owner, $repo, nomeSprint);
   
       }
+      
     });
     xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/milestones?state=all&sort=completeness");
     xhr.setRequestHeader("accept", "application/vnd.github.v3+json");
@@ -212,6 +216,7 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
          calculaCommits(contribuinte, todosCommits.length, numerosContribuintes, nomeSprint);
       
       }
+      
     });
     
     xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/commits?author="+contribuinte+"&since="+dataAberturaMilestone+"&until="+dataFechamentoMilestone);
@@ -232,6 +237,7 @@ export function contribuinteRepositorio(numeroMilestone, token, $owner, $repo, s
      GraficoPessoal(nomeContribuinte, qtdComitsContribuinte, nomeSprint);
      CreateDivDisplay(6, 1, 1)
    }
+   
     
    contador++;
  
@@ -292,6 +298,7 @@ export function geracaoPorGrupoAdicoes( token, $owner, $repo){
       
       getDadosSemanaisContribuinteAdicoes(qtdContribuintes, qtdSemanas, respostaJson);
     }
+   
   });
   
   xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/stats/contributors");
@@ -304,22 +311,26 @@ export function geracaoPorGrupoAdicoes( token, $owner, $repo){
 
 
 function calcResultadoDelecoes( respostaJson , iteracao, qtdContribuintes, qtdSemanas, dataSetArray){
-  var adicoes = [] ;
+  var delecoes = [] ;
   var semanas = [];
   for(var i = 0; i < qtdSemanas; i++){
-      adicoes[i] =  respostaJson.weeks[i].d
-      var minhaData = new Date( respostaJson.weeks[i].w * 1000);
-      let ye = new Intl.DateTimeFormat('en', { year: '2-digit' }).format(minhaData);
-      let mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(minhaData);
-      let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(minhaData);
-      semanas[i] =   `${da}/${mo}/${ye}`;
+    
+      
+        delecoes[i] =  respostaJson.weeks[i].d
+        var minhaData = new Date( respostaJson.weeks[i].w * 1000);
+        let ye = new Intl.DateTimeFormat('en', { year: '2-digit' }).format(minhaData);
+        let mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(minhaData);
+        let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(minhaData);
+        semanas[i] =   `${da}/${mo}/${ye}`;
+      
+     
   }
   var randomColor = Math.floor(Math.random()*16777215).toString(16);
   dataSetArray[iteracao] = {
 
     label: respostaJson.author.login,
     backgroundColor: "#" + randomColor ,
-    data: adicoes
+    data: delecoes
   }
 
   if(iteracao == qtdContribuintes - 1){
@@ -352,6 +363,7 @@ export function geracaoPorGrupoDelecoes( token, $owner, $repo){
 
       getDadosSemanaisContribuinteDelecoes(qtdContribuintes, qtdSemanas, respostaJson);
     }
+   
   });
   
   xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/stats/contributors");
@@ -366,6 +378,7 @@ function calcResultadoCommits( respostaJson , iteracao, qtdContribuintes, qtdSem
   var adicoes = [] ;
   var semanas = [];
   for(var i = 0; i < qtdSemanas; i++){
+
       adicoes[i] =  respostaJson.weeks[i].c
       var minhaData = new Date( respostaJson.weeks[i].w * 1000);
       let ye = new Intl.DateTimeFormat('en', { year: '2-digit' }).format(minhaData);
@@ -406,12 +419,15 @@ export function geracaoPorGrupoCommits( token, $owner, $repo){
     if(xhr.readyState === 4) {
 
       var respostaJson = JSON.parse(xhr.responseText)
+      console.log(respostaJson)
       var qtdContribuintes = respostaJson.length
       var qtdSemanas = respostaJson[0].weeks.length
  
        getDadosSemanaisContribuinteCommits(qtdContribuintes, qtdSemanas, respostaJson);
     }
-  });
+   
+  }
+  );
   
   xhr.open("GET", "https://api.github.com/repos/"+$owner+"/"+$repo+"/stats/contributors");
   xhr.setRequestHeader("authorization", "Bearer " + token);
