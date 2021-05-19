@@ -8,7 +8,7 @@ const script = document.createElement('script');
     function run(numeroMilestone, token,  owner, repo) {
         var dados = [numeroMilestone, token, owner, repo]
         chrome.storage.sync.set({key: dados}, function() {
-            console.log('Value is set to ' + dados);
+            console.log('Value is set to ');
           })
       }
    
@@ -19,7 +19,7 @@ const script = document.createElement('script');
        
           
         var token = localStorage.getItem('token');
-        console.log(urlParts)
+        
         run(urlParts[6], token, urlParts[3], urlParts[4])
       
     });

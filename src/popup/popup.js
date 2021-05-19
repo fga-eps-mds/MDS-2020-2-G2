@@ -15,7 +15,7 @@ chrome.storage.sync.get(['key'], function(result) {
   localStorage.setItem("repo", repo);
   localStorage.setItem("numeroMilestone", numeroMilestone)
   localStorage.setItem("token", token);
-  console.log(owner, repo, numeroMilestone, token );
+  
 });
 /*CREATE A DIV DISPLAY*/
 
