@@ -27,14 +27,6 @@ Suas principais Features são:
         <td align="center"><a href="https://github.com/eliasyousef00" target="_blank"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)" style="border-radius: 50%;" src="imagens/elias.jpg" width="auto;" alt="Eliás Yousef Santana Ali"/><br /><b>Eliás Yousef Santana Ali</b></a><br /><a href="https://github.com/eliasyousef00" target="_blank"></a></td>
         <td align="center"><a href="https://github.com/LorrayneCardozo" target="_blank"><img onmouseover="opaqImg(this)" onmouseout="normalImg(this)" style="border-radius: 50%;" src="imagens/Lorrayne.jpg" width="auto;" alt="Lorrayne Alves Cardozo"/><br /><b>Lorrayne Alves Cardozo</b></a><br /><a href="https://github.com/LorrayneCardozo" target="_blank"></a></td>
     </tr>
-    <script>
-    function opaqImg(x) {
-        x.style.opacity = "50%";
-    }
-    function normalImg(x) {
-        x.style.opacity = "100%";
-    }
-    </script>
 </table>
 
 ## Contribuição
