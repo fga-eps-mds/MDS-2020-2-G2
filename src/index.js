@@ -4,6 +4,7 @@ import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
   
     //URL DAS PÁGINAS
     var currentUrl = String(window.location.href);
+    
     var urlParts = currentUrl.split("/");
     //ABRIR MODAL CASO O BOTÃO CLOSE DA MILESTONE JÁ TENHA SIDO CLICADO
     if(localStorage.getItem('abrirModal')){
@@ -11,15 +12,22 @@ import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
       localStorage.removeItem('abrirModal');
     }
   
-        
-   
-     
+  
+  
      
     //VALIDA ENTRADA EM GITHUB MILESTONES
-    if (urlParts[5] == "milestones" && urlParts[2] == "github.com") {         
-    //BOTOES    
-    var botaoClose = document.getElementsByClassName("btn-link")[3]
-    botaoClose.addEventListener("click", function (e) {
+    if (urlParts[2] == "github.com" && urlParts[3] != "login" && urlParts[4] != "device"  && urlParts[5] != "success" &&  urlParts[5] != "confirmation") { 
+      var issues = document.getElementsByClassName("UnderlineNav-item hx_underlinenav-item no-wrap js-responsive-underlinenav-item")[1]
+      issues.addEventListener("click", function (e) {window.location.href = "https://github.com/"+urlParts[3]+"/"+urlParts[4]+"/issues"});
+     
+    }
+    if(urlParts[2] == "github.com" && urlParts[3] != "login" && urlParts[4] != "device"  && urlParts[5] == "issues"){
+      var botaoMilestone = document.getElementsByClassName('js-selected-navigation-item subnav-item')[1]
+      botaoMilestone.addEventListener("click", function (e) {window.location.href = "https://github.com/"+urlParts[3]+"/"+urlParts[4]+"/milestones"});
+    }
+    if(urlParts[5] == "milestones" && urlParts[2] == "github.com"){
+      var botaoClose = document.getElementsByClassName("btn-link")[3]
+      botaoClose.addEventListener("click", function (e) {
     // var closeMilestoneButton = document.querySelector(".d-inline-block.mr-2 .btn-link");
     //VALIDA FECHAMENTO DE MILESTONE
     // if (e.path[0] == closeMilestoneButton &&
@@ -48,10 +56,12 @@ import {ConfirmaLoginContaUsuario} from './modules/apiServices.js';
           //INSTRUÇÃO PARA AUTORIZAR A ABERTURA DO MODAL
         
           var base = document.querySelectorAll("form.d-inline-block.mr-2").action;
-          location.reload();
+          
      });
     }
-  ;
+    
+    
+  
 
  
   if(urlParts[2] == "github.com" && urlParts[3] == "login" && urlParts[4] == "device"  && urlParts[5] != "success" &&  urlParts[5] != "confirmation"){
@@ -90,3 +100,5 @@ function getNumberMilestone(valuesAPI){
   console.log(milestoneNumber)
   return milestoneNumber;
 }
+
+localStorage.setItem('currentUrl', currentUrl);
