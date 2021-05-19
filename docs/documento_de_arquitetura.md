@@ -17,7 +17,7 @@ Data|Versão|Descrição|Autor
 Este documento tem como finalidade apresentar ao leitor a arquitetura do projeto PullBot, assim como suas principais características, oferecendo uma visão mais simples e clara possível do modelo arquitetural adotado, possibilitando o pleno entendimento das subdivisões do sistema.
 
 ## 1.2. Escopo
-A extensão para Google Chrome PullBot tem como alvo desenvolvedores que utilizam a plataforma Github para a hospedagem de seus repositórios. O projeto consiste em facilitar e agilizar a análise de produtividade do time de desenvolvimento, gerando um arquivo .md com as métricas a serem estudadas.
+A extensão para Google Chrome PullBot tem como público alvo desenvolvedores que utilizam a plataforma Github para a hospedagem de seus repositórios. O projeto consiste em facilitar e agilizar a análise de produtividade do time de desenvolvimento, gerando um arquivo .md com as métricas a serem analisadas, assim como gráficos informativos no popup da aplicação.
 
 ## 1.3. Definições, Acrônimos, Abreviações
 Definições/Acrônimos/Abreviações| Significado
