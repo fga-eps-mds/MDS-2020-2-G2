@@ -17,7 +17,7 @@ Data|Versão|Descrição|Autor
 Este documento tem como finalidade apresentar ao leitor a arquitetura do projeto PullBot, assim como suas principais características, oferecendo uma visão mais simples e clara possível do modelo arquitetural adotado, possibilitando o pleno entendimento das subdivisões do sistema.
 
 ## 1.2. Escopo
-A extensão para Google Chrome PullBot tem como alvo desenvolvedores que utilizam a plataforma Github para a hospedagem de seus repositórios. O projeto consiste em facilitar e agilizar a análise de produtividade do time de desenvolvimento, gerando um arquivo .md com as métricas a serem estudadas.
+A extensão para Google Chrome PullBot tem como público alvo desenvolvedores que utilizam a plataforma Github para a hospedagem de seus repositórios. O projeto consiste em facilitar e agilizar a análise de produtividade do time de desenvolvimento, gerando um arquivo .md com as métricas a serem analisadas, assim como gráficos informativos no popup da aplicação.
 
 ## 1.3. Definições, Acrônimos, Abreviações
 Definições/Acrônimos/Abreviações| Significado
@@ -56,39 +56,34 @@ A finalidade do projeto PullBot se concentra em auxiliar os usuário da platafor
 * Background Script;
 * Content Script.
 
-## 2.1. Camada de negócio (Back-end)
-Também chamada de lógica empresarial, regras de negócio ou funcionalidade. É nela que ficam as funções e regras de todo o negócio. Não existe uma interface para o usuário e seus dados são voláteis. Nessa camada são utilizadas as tecnologias Node em conjunto com Express.
-
-### 2.1.1. Node
-O Node.js pode ser definido como um ambiente de execução Javascript server-side.Isso significa que com o Node.js é possível criar aplicações Javascript para rodar como uma aplicação standalone em uma máquina, não dependendo de um browser para a execução[5]. No PullBot, o node fará uso da arquitetura overview.
-
-### 2.1.2. Express
-Express é um framework para aplicativo da web do Node.js mínimo e flexível que fornece um conjunto bem robusto de recursos para os aplicativos web e móvel.
-
-## 2.2. Tecnologias
+## 2.1. Tecnologias
 Tecnologia | Descrição
 :-: | :-:
+HTML5 | Linguagem de marcação considerada a tecnologia chave para o desenvolvimento Web.
+CSS3 | Tecnologia de estilização de determinadas aplicações.
 JavaScript | É uma linguagem de programação de alto nível, principalmente utilizada para o desenvolvimento web,de fácil execução e que pode ser rodadar a partir de um navegador de internet. Ela é uma linguagem amplamente utilizaeda.
 Git | Git é um sistema de versionamento distribuído, usado para registrar o histórico de edições.Ela é geralmente usada no desenvolvimento de software.
-Docker | É uma linguagem de alto desempenho.Plataforma de containers que agrupa ambientes de desenvolvimento.
+Chart.js | Biblioteca JavaScript para geração de gráficos.
+FileServer.js | Biblioteca JavaScript utilizada para salvar arquivos do lado do cliente.
 
-## 2.3. API do GitHub
+
+## 2.2. API do GitHub
 API é um conjunto de instruções e informações sobre o acesso de uma aplicação. Ela é útil para estabalecer comunicação com funcionalidades e infomações que permite ao programador a implementação de novas funções não disponíveis comumente.
 
-## 2.4. OAuth 2
+## 2.3. OAuth 2
 O OAuth 2 é um protocolo de autorização que permite que uma aplicação se autentique em outra. Funciona de forma que uma aplicação requisita ao usuário a permissão de acesso para que não haja a necessidade de acessar alguma senha ou token pessoal. Após o usuário permitir o acesso, a aplicação tem aquisição limitada às suas informações, e mesmo que a senha seja alterada a autorização continuará válida.
 
-## 2.5. Modelo Arquitetural
-### 2.5.1. Manifest
+## 2.4. Modelo Arquitetural
+### 2.4.1. Manifest
 O Manifest é um arquivo intitulado `manifest.json` que faz parte de todas as extensões criadas para o Google Chrome. Tem a função de conceder informações relevantes sobre a extensão ao navegador, como arquivos importantes e recursos utilizados. Além disso, o manifest também provê ponteiros para os outros arquivos da extensão.
 
-### 2.5.2. Background Script
+### 2.4.2. Background Script
 O script de fundo - ou script de segundo plano - é o responsável pela operação dos eventos e será uma ponte entre as outras partes da extensão. Este script permanece inativo até que seja acionado através da execução de um evento, que no caso do PullBot será o fechamendo de uma milestone no GitHub. O script será ativado assim que o evento for efetuado, e após realizar suas devidas instruções, tornará ao ócio.
 
-### 2.5.3. Content script
+### 2.4.3. Content script
 O script de conteúdo será executado nos contextos de uma página que foi carregada no navegador, que no caso será a do GitHub. Terá a função de se comunicar com a extensão trocando mensagens e armazenando valores.
 
-## 2.6. Diagrama de Relações
+## 2.5. Diagrama de Relações
 <img src="https://raw.githubusercontent.com/fga-eps-mds/PullBot/master/imagens/diagramaDeRelacoes.jpg" width="550">
 
 # 3. Metas e Restrições da Arquitetura
@@ -103,7 +98,7 @@ O script de conteúdo será executado nos contextos de uma página que foi carre
 
 # 4. Visão de Caso de Uso
 ## 4.1. Ator (Usuário)
-O usuário será o único ator do sistema, responsável por instalar a extensão em seu navegador e realizar o fechamento de uma milestone no GitHub, afim de que o PullBot exerça suas funcionalidades.
+O usuário será o único ator do sistema, responsável por instalar a extensão em seu navegador, navegar até o GitHub na parte de milestones, conferir os gráficos no popup e/ou realizar o fechamento de uma milestone no GitHub, afim de que o PullBot exerça suas funcionalidades.
 
 ## 4.2. Diagrama de Caso de Uso
 <img src="https://raw.githubusercontent.com/fga-eps-mds/PullBot/master/imagens/casoDeUso.jpeg" width="750">
