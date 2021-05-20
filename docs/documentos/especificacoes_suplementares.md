@@ -2,12 +2,13 @@
 
 | Data | Versão | Descrição | Autor | 
 |:-:|:-:|:-:|:-:|
-27/02/2021 | 0.1 | Criação do documento | Peniel Etèmana|
-30/03/2021 | 0.2 | Revisão do documento | Lorrayne Cardozo
+27/02/2021 | 1.0 | Criação do documento | Peniel Etèmana|
+30/03/2021 | 1.1 | Revisão do documento | Lorrayne Cardozo
+19/05/2021 | 1.2 | Revisão do documento | Jaime Juan
 
 # 1. Introdução
 ## 1.1 Finalidade
-Este documento tem como objetivo abordar aspectos técnicos, legais e demais requisitos sobre a aplicação, assim como suprir a falta dos demais documentos para o projeto PullBot! 
+Este documento tem como objetivo abordar aspectos técnicos, legais e demais requisitos sobre a aplicação, assim como suprir a falta dos demais documentos para o projeto PullBot. 
 
 ## 1.2 Escopo
 Os requisitos aqui elucidados fazem parte do processo de desenvolvimento do nosso projeto PullBot, que consiste em uma extensão para o GitHub em que a cada fechamento de milestone fornece ao usuário um apanhado geral da atual sprint e realizando automaticamente um Pull Request.
@@ -59,9 +60,9 @@ As informações sigilosas dos usuário só poderão ser vista por ele mesmo. A 
   * Whatsapp
 
 ### 8.3.2 Desenvolvimento
-  * Docker
   * Github
   * Git
+  * Zenhub
 
 # 9. Interfaces
 ## 9.1 Interface do Usuário
