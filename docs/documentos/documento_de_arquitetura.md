@@ -102,7 +102,7 @@ O script de conteúdo será executado nos contextos de uma página que foi carre
 O usuário será o único ator do sistema, responsável por instalar a extensão em seu navegador, navegar até o GitHub na parte de milestones, conferir os gráficos no popup e/ou realizar o fechamento de uma milestone no GitHub, afim de que o PullBot exerça suas funcionalidades.
 
 ## 4.2. Diagrama de Caso de Uso
-<img src="https://raw.githubusercontent.com/fga-eps-mds/PullBot/master/imagens/casoDeUso.jpeg" width="750">
+<img src="imagens\diagrama.png" width="750">
 
 # 5. Tamanho e Desempenho
 A arquitetura foi planejada para que a aplicação atenda de forma satisfatória os requisitos do produto e permita uma fácil implementação de uma nova funcionalidade ao software.
