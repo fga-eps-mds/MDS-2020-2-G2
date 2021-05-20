@@ -23,10 +23,12 @@ Suas principais Features são:
 ### Requisitos
 É necessário:
 - Ter Google Chrome instalado no computador, [veja como instala aqui](https://www.google.com/chrome/) caso não tenha.
-- Por hora a extensão não está disponível online, então para utilizá-la precisa ativar o modo desenvolvedor nas extensões e carregar a pasta `src` dentro da pasta do projeto.
+- Baixar e ativar a extensão na loja web do Chrome, [clique aqui](https://chrome.google.com/webstore/detail/git-pullbot-extension/ilniljgnhobelgnbjiiieanjbaiifcji?hl=pt-BR) para ir direto.
+
 ### Como rodar
-- Ir no ícone da extensão PullBot e clicar no botão para conectar-se.
-- Deixar a extensão ativa enquanto utiliza o GitHub para fechamento de milestone.
+- Clicar no ícone da extensão PullBot.
+- Deixar a extensão ativa enquanto utiliza o GitHub.
+- Clicar em cima da Milestone desejada.
 
 ## :octocat: Integrantes
 <table>
@@ -41,6 +43,10 @@ Suas principais Features são:
 ## :movie_camera: Release 1
 - [Assista aqui](https://www.youtube.com/watch?v=3ph3lByYGgg).
 - [Veja os slides aqui](https://drive.google.com/file/d/1eqFcDay-HR5pWDbDmp6qv3tlPCDPJwLK/view?usp=sharing).
+
+## :movie_camera: Release 2
+- [Assista aqui](https://youtu.be/psydR6FUFlA).
+- [Veja os slides aqui](https://drive.google.com/file/d/1m302FOe0Av2GR6tCJ5lGLFSrfbxH1kzv/view?usp=sharing).
 
 ## :balloon: Contribuição
 Para contribuir com o projeto, [leia](https://github.com/fga-eps-mds/PullBot/blob/master/CONTRIBUTING.md).
